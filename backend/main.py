@@ -3,7 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import uvicorn
 
-from routes import auth, dashboard, camera, map_routes
+from routes import auth, dashboard, camera
+from routes import map as map_routes
 from database import connect_to_mongo, close_mongo_connection
 
 app = FastAPI(

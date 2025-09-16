@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 from datetime import datetime
 from bson import ObjectId
-
+from . import PyObjectId
 class GeoLocation(BaseModel):
     type: str = "Point"
     coordinates: List[float]  # [longitude, latitude] - MongoDB format

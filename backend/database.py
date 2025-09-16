@@ -2,6 +2,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo.errors import ServerSelectionTimeoutError
 import logging
 
+
 # MongoDB configuration
 MONGODB_URL = "mongodb://localhost:27017"
 DATABASE_NAME = "sentinelguard"
@@ -14,8 +15,8 @@ async def connect_to_mongo():
     """Create database connection"""
     global mongodb_client, mongodb
     try:
-        mongodb_client = AsyncIOMotorClient(MONGODB_URL)
-        mongodb = mongodb_client[DATABASE_NAME]
+        mongodb_client = AsyncIOMotorClient('mongodb+srv://sih:sih123@cluster0.ga6g9fv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+        mongodb = mongodb_client['sih1']
         
         # Test the connection
         await mongodb_client.admin.command('ping')

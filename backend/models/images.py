@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import datetime
 from bson import ObjectId
-
+from . import PyObjectId
 class ImageRecord(BaseModel):
     id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
     image_id: str = Field(..., unique=True)

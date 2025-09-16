@@ -4,7 +4,7 @@ from database import get_database
 from models.devices import Device, DeviceCreate, DeviceUpdate, Alert, GeoLocation
 from bson import ObjectId
 import random
-
+from services.auth_service import get_password_hash
 async def get_all_devices() -> List[Device]:
     db = get_database()
     devices_cursor = db.devices.find()
