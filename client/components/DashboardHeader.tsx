@@ -1,5 +1,5 @@
 import { SentinelLogo } from "./ui/sentinel-logo";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function DashboardHeader() {
   return (
@@ -15,24 +15,24 @@ export function DashboardHeader() {
 
         {/* Navigation Menu */}
         <nav className="flex items-center gap-6">
-          <a
-            href="#"
+          <Link
+            to="/dashboard"
             className="text-white font-semibold text-sm hover:text-white/80 transition-colors"
           >
             Live Dashboard
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/camera-feed"
             className="text-white/90 text-sm hover:text-white transition-colors"
           >
             Camera Feed
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/map"
             className="text-white/90 text-sm hover:text-white transition-colors"
           >
             Map View
-          </a>
+          </Link>
           <a
             href="#"
             className="text-white/90 text-sm hover:text-white transition-colors"

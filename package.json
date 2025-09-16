@@ -23,7 +23,9 @@
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "leaflet": "^1.9.4",
     "path-to-regexp": "^8.3.0",
+    "react-leaflet": "^5.0.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
