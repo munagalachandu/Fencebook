@@ -1,7 +1,9 @@
 import { SentinelLogo } from "./ui/sentinel-logo";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function DashboardHeader() {
+  const location = useLocation();
+
   return (
     <div className="w-full h-16 bg-sentinel-green shadow-sm border-b border-sentinel-border">
       <div className="flex items-center justify-between px-6 h-full">
@@ -17,34 +19,54 @@ export function DashboardHeader() {
         <nav className="flex items-center gap-6">
           <Link
             to="/dashboard"
-            className="text-white font-semibold text-sm hover:text-white/80 transition-colors"
+            className={`text-sm hover:text-white transition-colors ${
+              location.pathname === "/dashboard"
+                ? "text-white font-semibold"
+                : "text-white/90"
+            }`}
           >
             Live Dashboard
           </Link>
           <Link
             to="/camera-feed"
-            className="text-white/90 text-sm hover:text-white transition-colors"
+            className={`text-sm hover:text-white transition-colors ${
+              location.pathname === "/camera-feed"
+                ? "text-white font-semibold"
+                : "text-white/90"
+            }`}
           >
             Camera Feed
           </Link>
           <Link
             to="/map"
-            className="text-white/90 text-sm hover:text-white transition-colors"
+            className={`text-sm hover:text-white transition-colors ${
+              location.pathname === "/map"
+                ? "text-white font-semibold"
+                : "text-white/90"
+            }`}
           >
             Map View
           </Link>
-          <a
-            href="#"
-            className="text-white/90 text-sm hover:text-white transition-colors"
+          <Link
+            to="/alerts"
+            className={`text-sm hover:text-white transition-colors ${
+              location.pathname === "/alerts"
+                ? "text-white font-semibold"
+                : "text-white/90"
+            }`}
           >
             Alerts
-          </a>
-          <a
-            href="#"
-            className="text-white/90 text-sm hover:text-white transition-colors"
+          </Link>
+          <Link
+            to="/logs-history"
+            className={`text-sm hover:text-white transition-colors ${
+              location.pathname === "/logs-history"
+                ? "text-white font-semibold"
+                : "text-white/90"
+            }`}
           >
             History
-          </a>
+          </Link>
           <a
             href="#"
             className="text-white/90 text-sm hover:text-white transition-colors"
