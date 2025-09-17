@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import CameraFeed from "./pages/CameraFeed";
 import Map from "./pages/Map";
+import Alerts from "./pages/Alerts";
+import LogsHistory from "./pages/LogsHistory";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/camera-feed" element={<CameraFeed />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/alerts" element={<Alerts />} />
+          <Route path="/logs-history" element={<LogsHistory />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
